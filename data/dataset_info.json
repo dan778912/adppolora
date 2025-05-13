@@ -714,5 +714,23 @@
       "prompt": "content"
     },
     "folder": "python"
+  },
+  "ad_ppo": {
+    "file_name": "ad_ppo.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "ad_reward": {
+    "file_name": "ad_reward.json",
+    "ranking": true,
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
   }
 }

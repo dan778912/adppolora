@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+model_name_or_path: meta-llama/Meta-Llama-3.1-8B-Instruct
 trust_remote_code: true
 
 ### method
@@ -10,7 +10,7 @@ lora_rank: 8
 lora_target: all
 
 ### dataset
-dataset: dpo_en_demo
+dataset: ad_reward
 template: llama3
 cutoff_len: 2048
 max_samples: 1000
