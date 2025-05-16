@@ -62,7 +62,9 @@ logger = logging.get_logger(__name__)
 
 
 class CustomPPOTrainer(PPOTrainer, Trainer):
-    r"""Inherit PPOTrainer."""
+    def __new__(cls, *args, **kwargs):
+        # Bypass Huggingface HubMixin's __new__ to avoid deep copying large model parameters for push_to_hub.
+        return object.__new__(cls)
 
     def __init__(
         self,
