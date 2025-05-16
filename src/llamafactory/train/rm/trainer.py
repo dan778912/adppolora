@@ -142,13 +142,6 @@ class CustomRewardModel(torch.nn.Module):
             Scalar tensor reward that can be used for gradient computation
         """
         total_losses = []
-        
-        if top_k_docs_dict is None:
-            # If no top_k_docs provided, we'll build them on demand
-            rankings = load_rankings_file()
-            ads_by_id = load_ads_by_id()
-            top_k_docs_dict = {}
-        
         for ad_idx, original_ad in enumerate(self.raw_ads):
             if ad_idx >= len(decoded_responses):
                 # Skip if we don't have a corresponding rewritten ad
@@ -203,17 +196,9 @@ class CustomRewardModel(torch.nn.Module):
                     docs_for_query
                 )
                 
-                # Ensure loss is scalar
-                if loss.dim() > 0 and loss.numel() > 1:
+                # Ensure loss is scalar (reduce any non-zero-dimensional tensor to a scalar)
+                if loss.dim() > 0:
                     loss = loss.mean()
-                
-                # Create a dummy connection to ensure gradient flow if needed
-                if not loss.requires_grad:
-                    # A small value multiplied by a requires_grad tensor ensures gradient flow
-                    dummy = torch.tensor(1e-10, requires_grad=True)
-                    loss = loss + dummy
-                
-                # Add to list of losses
                 losses.append(loss)
             
             # Average the losses for this ad across different queries
@@ -229,7 +214,6 @@ class CustomRewardModel(torch.nn.Module):
             return final_reward  # Negative because lower loss = higher reward
         else:
             # Return default tensor with grad enabled
-            # Using 0.0 as neutral reward when we can't calculate
             return torch.tensor(0.0, requires_grad=True)
 
 def build_top_k_docs(query, rankings=None, original_ads_by_id=None, max_docs=5):
@@ -363,47 +347,12 @@ class PairwiseTrainer(Trainer):
     def create_optimizer(self) -> "torch.optim.Optimizer":
         # First call the parent class method to setup the optimizer properly
         optimizer = super().create_optimizer()
-        # Unconditionally disable gradient checkpointing for custom loss training
-        if self.use_custom_loss:
-            # Disable checkpointing on the main model
-            if hasattr(self.model, 'gradient_checkpointing_disable'):
-                logger.info_rank0("Disabling gradient checkpointing on main model for custom loss training")
-                self.model.gradient_checkpointing_disable()
-            # Clear config flag if present
-            if hasattr(self.model.config, 'gradient_checkpointing'):
-                self.model.config.gradient_checkpointing = False
-            # Disable on distributed module wrapper
-            if hasattr(self.model, 'module') and hasattr(self.model.module, 'gradient_checkpointing_disable'):
-                self.model.module.gradient_checkpointing_disable()
-            # Disable checkpointing for similarity loss encoder (SentenceTransformer)
-            if hasattr(self, 'similarity_loss') and hasattr(self.similarity_loss, 'encoder'):
-                encoder = self.similarity_loss.encoder
-                # Try to get underlying HuggingFace model
-                encoder_model = getattr(encoder, 'model', None)
-                if encoder_model and hasattr(encoder_model, 'gradient_checkpointing_disable'):
-                    logger.info_rank0("Disabling gradient checkpointing on similarity loss encoder")
-                    encoder_model.gradient_checkpointing_disable()
-                    if hasattr(encoder_model.config, 'gradient_checkpointing'):
-                        encoder_model.config.gradient_checkpointing = False
-        # Fallback to static graph mode for both models
-        try:
-            if hasattr(self.model, '_set_static_graph'):
-                logger.info_rank0("Setting static graph for main model for distributed training")
-                self.model._set_static_graph()
-            elif hasattr(self.model, 'module') and hasattr(self.model.module, '_set_static_graph'):
-                logger.info_rank0("Setting static graph on main model module for distributed training")
-                self.model.module._set_static_graph()
-            # Static graph for similarity loss encoder
-            if hasattr(self, 'similarity_loss') and hasattr(self.similarity_loss, 'encoder'):
-                encoder_model = getattr(self.similarity_loss.encoder, 'model', None)
-                if encoder_model and hasattr(encoder_model, '_set_static_graph'):
-                    logger.info_rank0("Setting static graph for similarity loss encoder for distributed training")
-                    encoder_model._set_static_graph()
-                elif encoder_model and hasattr(encoder_model, 'module') and hasattr(encoder_model.module, '_set_static_graph'):
-                    logger.info_rank0("Setting static graph on similarity loss encoder module for distributed training")
-                    encoder_model.module._set_static_graph()
-        except Exception as e:
-            logger.warning(f"Failed to set static graph: {str(e)}")
+        # Re-enable gradient checkpointing on the main model to reduce memory footprint
+        if hasattr(self.model, 'gradient_checkpointing_enable'):
+            logger.info_rank0("Re-enabling gradient checkpointing on main model for memory savings")
+            self.model.gradient_checkpointing_enable()
+        if hasattr(self.model, 'module') and hasattr(self.model.module, 'gradient_checkpointing_enable'):
+            self.model.module.gradient_checkpointing_enable()
         # Ensure DDP's find_unused_parameters remains enabled
         if hasattr(self, 'accelerator') and hasattr(self.accelerator, 'state'):
             logger.info_rank0("Checking DDP settings in accelerator")
@@ -430,68 +379,46 @@ class PairwiseTrainer(Trainer):
     @override
     def compute_loss(
         self, model: "PreTrainedModel", inputs: dict[str, "torch.Tensor"], return_outputs: bool = False, **kwargs
-    ) -> Union["torch.Tensor", tuple["torch.Tensor", list["torch.Tensor"]]]:
-        """Compute pairwise loss with optional CustomRewardModel support.
-        
-        If custom loss is enabled and the custom reward model is available,
-        this will use the CustomRewardModel.
-        Otherwise, it will fall back to the standard pairwise loss.
+    ) -> Union["torch.Tensor", tuple["torch.Tensor", Any]]:
         """
+        Compute loss for training, optionally incorporating custom similarity loss.
+        Always reduce non-scalar model and custom losses to scalars.
+        """
+        # Debug log input keys
+        logger.info_rank0(f"compute_loss inputs keys: {list(inputs.keys())}")
+        # Forward pass
+        outputs = model(**inputs)
+        # Extract model loss
+        if isinstance(outputs, tuple):
+            model_loss = outputs[0]
+        else:
+            model_loss = outputs.loss
+        # Reduce model_loss to scalar if needed
+        if isinstance(model_loss, torch.Tensor) and model_loss.dim() > 0:
+            model_loss = model_loss.mean()
+
+        # Optionally add custom similarity loss
         if self.use_custom_loss and self.custom_reward_model and self.similarity_loss:
-            # Extract necessary information from inputs
             data = self._extract_similarity_loss_inputs(inputs)
-            
             if data:
                 query = data['query']
                 original_doc = data['original_doc']
                 rewritten_doc = data['rewritten_doc']
                 top_k_docs = data['top_k_docs']
-                
-                # Calculate the similarity loss
                 custom_loss = self.similarity_loss(query, original_doc, rewritten_doc, top_k_docs)
-                
-                # Ensure custom_loss is scalar
-                if custom_loss.dim() > 0 and custom_loss.numel() > 1:
+                # Reduce custom_loss to scalar
+                if isinstance(custom_loss, torch.Tensor) and custom_loss.dim() > 0:
                     custom_loss = custom_loss.mean()
-                
-                # Get outputs from model for return value
-                outputs = model(**inputs)
-                
-                # Handle different output formats
-                if isinstance(outputs, tuple):
-                    # For tuple outputs, the loss is typically the first element
-                    model_loss = outputs[0] if outputs else torch.tensor(0.0, requires_grad=True)
-                else:
-                    # For outputs with loss attribute
-                    model_loss = getattr(outputs, 'loss', torch.tensor(0.0, requires_grad=True))
-                
-                # Ensure model_loss is scalar too
-                if model_loss.dim() > 0 and model_loss.numel() > 1:
-                    model_loss = model_loss.mean()
-                
-                # Combine with model loss if needed or just use the custom loss
-                combined_loss = custom_loss + model_loss * 0.5  # You can adjust the weight
-                
+                # Combine losses: ensure gradient flows from model loss
+                loss = custom_loss + model_loss * 0
+                print(loss)
                 if return_outputs:
-                    # Return combined loss and outputs
-                    return combined_loss, outputs
-                else:
-                    return combined_loss
-        
-        # Fall back to standard loss computation
-        outputs = model(**inputs)
-        
-        # Handle different output formats for standard loss computation too
-        if return_outputs:
-            if isinstance(outputs, tuple):
-                return outputs[0], outputs
-            else:
-                return outputs.loss, outputs
-        else:
-            if isinstance(outputs, tuple):
-                return outputs[0]
-            else:
-                return outputs.loss
+                    return loss, outputs
+                return loss
+
+        device = inputs['input_ids'].device if 'input_ids' in inputs else None
+        zero_loss = torch.tensor(0.0, device=device, requires_grad=True)
+        return zero_loss
 
     def _extract_similarity_loss_inputs(self, inputs):
         """
@@ -513,163 +440,58 @@ class PairwiseTrainer(Trainer):
             if tokenizer is None and hasattr(self, 'model'):
                 tokenizer = getattr(self.model, 'tokenizer', None)
             
-            # Try to extract input texts from input_ids if available
+            # Decode texts: prefer explicit chosen/rejected inputs if present
             input_texts = []
             if 'input_ids' in inputs and tokenizer is not None:
                 input_texts = tokenizer.batch_decode(inputs['input_ids'], skip_special_tokens=True)
-            
-            # Extract chosen/rejected texts for reward model format
+
             chosen_texts = []
             rejected_texts = []
-            
             if 'chosen_input_ids' in inputs and tokenizer is not None:
                 chosen_texts = tokenizer.batch_decode(inputs['chosen_input_ids'], skip_special_tokens=True)
-            
             if 'rejected_input_ids' in inputs and tokenizer is not None:
                 rejected_texts = tokenizer.batch_decode(inputs['rejected_input_ids'], skip_special_tokens=True)
+
+            # Determine original and rewritten docs
+            if chosen_texts and rejected_texts:
+                original_doc = rejected_texts[0]
+                rewritten_doc = chosen_texts[0]
+            elif len(input_texts) == 2:
+                # fallback: interleaved collator output [chosen, rejected]
+                rewritten_doc = input_texts[0]
+                original_doc = input_texts[1]
+            else:
+                return None
             
-            # If we've found valid texts, try to extract/construct query
-            query = None
-            if chosen_texts or rejected_texts or input_texts:
-                # First try to extract query from input texts using regex pattern
-                import re
-                instruction_pattern = r"Human:\s*(.+?)\s*\n\nAssistant:"
-                
-                for text in input_texts:
-                    match = re.search(instruction_pattern, text)
-                    if match:
-                        query = match.group(1).strip()
-                        break
-                
-                # If no query found, try loading from ad_reward.json
-                if not query:
-                    try:
-                        reward_file = 'data/ad_reward.json'
-                        if os.path.exists(reward_file):
-                            with open(reward_file, 'r', encoding='utf-8') as f:
-                                reward_data = json.load(f)
-                                if isinstance(reward_data, list) and len(reward_data) > 0:
-                                    # Get the instruction from a random example
-                                    example = random.choice(reward_data)
-                                    instruction = example.get('instruction', '')
-                                    
-                                    # If instruction contains "Rewrite the advertisement", extract keywords
-                                    if 'Rewrite the advertisement' in instruction:
-                                        text = example.get('input', '')
-                                        # Extract keywords for synthetic query
-                                        words = text.lower().split()
-                                        keywords = [w for w in words if len(w) > 5 and w.isalpha()]
-                                        if keywords:
-                                            num_words = min(len(keywords), random.randint(2, 3))
-                                            selected = random.sample(keywords, num_words)
-                                            query = ' '.join(selected)
-                                        else:
-                                            query = "product information"
-                                    else:
-                                        # Extract query part from instruction if possible
-                                        query = instruction
-                    except Exception as e:
-                        print(f"Error loading ad_reward.json: {e}")
-                
-                # If still no query, fall back to a default
-                if not query:
-                    query = "What products do you recommend?"
-                
-                # Determine original and rewritten docs
-                original_doc = None
-                rewritten_doc = None
-                
-                # For reward model format: rejected = original, chosen = rewritten
-                if rejected_texts and chosen_texts:
-                    original_doc = rejected_texts[0]
-                    rewritten_doc = chosen_texts[0]
-                # If only chosen available, use input as original
-                elif chosen_texts and input_texts:
-                    original_doc = input_texts[0]
-                    rewritten_doc = chosen_texts[0]
-                # If not enough data, try to use dataset if available
-                elif hasattr(self, 'train_dataset') and self.train_dataset:
-                    # Get a random example from the dataset
-                    index = random.randint(0, len(self.train_dataset) - 1)
-                    example = self.train_dataset[index]
-                    
-                    # Extract original and rewritten docs
-                    original_doc = example.get('input', example.get('rejected', ''))
-                    rewritten_doc = example.get('chosen', '')
-                else:
-                    # Not enough data to proceed
-                    return None
-                
-                # Get top-k docs from rankings
-                rankings = load_rankings_file()
-                ads_by_id = load_ads_by_id()
-                top_k_docs = build_top_k_docs(query, rankings, ads_by_id)
-                
-                # If no top-k docs found, create variations of the original
-                if not top_k_docs:
-                    top_k_docs = []
-                    
-                    # Use classified ads to find similar domain/subdomain docs
-                    classified_ads = load_classified_ads()
-                    query_responses = load_query_responses()
-                    
-                    # Try to identify domain/subdomain of the original doc
-                    domain = subdomain = None
-                    
-                    # Look through query responses to guess domain/subdomain
-                    for q, info in query_responses.items():
-                        if original_doc and original_doc in info.get('retrieved_context', ''):
-                            domain = info.get('domain')
-                            subdomain = info.get('subdomain')
-                            break
-                    
-                    # If domain/subdomain found, look for other ads in same category
-                    if domain and subdomain:
-                        ads_by_id = load_ads_by_id()
-                        for ad_id, ad_info in classified_ads.items():
-                            if ad_info.get('domain') == domain and ad_info.get('subdomain') == subdomain:
-                                if ad_id in ads_by_id:
-                                    ad = ads_by_id[ad_id]
-                                    if 'text' in ad and ad['text'] != original_doc:
-                                        top_k_docs.append(ad['text'])
-                                        if len(top_k_docs) >= 3:
-                                            break
-                    
-                    # If still no docs, create variations
-                    if not top_k_docs and original_doc:
-                        # Add a variation with sentence shuffling
-                        sentences = original_doc.split('.')
-                        if len(sentences) > 2:
-                            random.shuffle(sentences)
-                            top_k_docs.append('. '.join(sentences[:len(sentences)//2]) + '.')
-                        
-                        # Add a variation with word removal
-                        words = original_doc.split()
-                        if len(words) > 20:
-                            removals = random.sample(range(len(words)), min(10, len(words) // 3))
-                            variation = ' '.join([w for i, w in enumerate(words) if i not in removals])
-                            top_k_docs.append(variation)
-                
-                # Make sure the original document is not in top_k_docs
-                top_k_docs = [doc for doc in top_k_docs if doc != original_doc]
-                
-                # If we still don't have any top-k docs, add a simple variation
-                if not top_k_docs and original_doc:
-                    top_k_docs.append(original_doc[:len(original_doc)//2] + "...")
-                
-                return {
-                    'query': query,
-                    'original_doc': original_doc,
-                    'rewritten_doc': rewritten_doc,
-                    'top_k_docs': top_k_docs
-                }
+            # Infer the real retrieval query by matching the ad text back to its ad_id (using substring match)
+            all_ads = load_ads_by_id()
+            matched_ad_id = next(
+                (aid for aid, ad in all_ads.items()
+                 if ad.get('text', '').strip() in original_doc
+                 or original_doc in ad.get('text', '').strip()),
+                None
+            )
+            if not matched_ad_id:
+                return None
+            query_resps = load_query_responses()
+            query = next((q for q, info in query_resps.items() if matched_ad_id in info.get('documents', [])), None)
+            if not query:
+                return None
             
-            return None
+            # Get top-k docs from rankings and require at least one
+            top_k_docs = build_top_k_docs(query, load_rankings_file(), load_ads_by_id())
+            if not top_k_docs:
+                return None
+            return {
+                'query': query,
+                'original_doc': original_doc,
+                'rewritten_doc': rewritten_doc,
+                'top_k_docs': top_k_docs
+            }
             
         except Exception as e:
-            import logging
-            logger = logging.getLogger(__name__)
-            logger.warning(f"Error extracting similarity loss inputs: {str(e)}")
+            # Use module-level logger to report extraction errors
+            logger.warning(f"Error extracting similarity loss inputs: {e}")
             return None
 
     def save_predictions(self, predict_results: "PredictionOutput") -> None:

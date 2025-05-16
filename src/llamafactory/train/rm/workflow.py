@@ -24,6 +24,7 @@ from ..callbacks import fix_valuehead_checkpoint
 from ..trainer_utils import create_modelcard_and_push
 from .metric import ComputeAccuracy
 from .trainer import PairwiseTrainer
+import logging
 
 
 if TYPE_CHECKING:
@@ -48,6 +49,18 @@ def run_rm(
     # Ensure loss is logged at each epoch for plotting
     training_args.logging_strategy = "epoch"
     model = load_model(tokenizer, model_args, finetuning_args, training_args.do_train, add_valuehead=True)
+    # Ensure PEFT inputs require grad for gradient checkpointing (see peft#137)
+    try:
+        model.enable_input_require_grads()
+        logging.get_logger(__name__).info_rank0("Enabled input.require_grad on PEFT model for checkpointing")
+    except Exception:
+        pass
+    # Re-enable gradient checkpointing on the main model to reduce GPU memory usage
+    try:
+        model.gradient_checkpointing_enable()
+        logging.get_logger(__name__).info_rank0("Re-enabled gradient checkpointing for main model to save memory")
+    except Exception:
+        pass
     data_collator = PairwiseDataCollatorWithPadding(
         template=template, model=model, pad_to_multiple_of=8, **tokenizer_module
     )

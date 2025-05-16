@@ -22,7 +22,8 @@ class SimilarityLoss(nn.Module):
             gamma: Weight for the l3 loss (preservation loss).
         """
         super(SimilarityLoss, self).__init__()
-        self.encoder = SentenceTransformer(embedding_model_name)
+        # Force the sentence-transformers encoder on CPU to save GPU memory
+        self.encoder = SentenceTransformer(embedding_model_name, device="cpu")
         self.alpha = alpha
         self.beta = beta
         self.gamma = gamma
