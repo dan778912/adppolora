@@ -43,6 +43,10 @@ def run_rm(
     tokenizer = tokenizer_module["tokenizer"]
     template = get_template_and_fix_tokenizer(tokenizer, data_args)
     dataset_module = get_dataset(template, model_args, data_args, training_args, stage="rm", **tokenizer_module)
+    # Disable gradient checkpointing for the reward model stage to avoid reentrant backward issues
+    model_args.disable_gradient_checkpointing = True
+    # Ensure loss is logged at each epoch for plotting
+    training_args.logging_strategy = "epoch"
     model = load_model(tokenizer, model_args, finetuning_args, training_args.do_train, add_valuehead=True)
     data_collator = PairwiseDataCollatorWithPadding(
         template=template, model=model, pad_to_multiple_of=8, **tokenizer_module
@@ -70,7 +74,7 @@ def run_rm(
         trainer.log_metrics("train", train_result.metrics)
         trainer.save_metrics("train", train_result.metrics)
         trainer.save_state()
-        if trainer.is_world_process_zero() and finetuning_args.plot_loss:
+        if trainer.is_world_process_zero():
             keys = ["loss"]
             if isinstance(dataset_module.get("eval_dataset"), dict):
                 keys += sum(
