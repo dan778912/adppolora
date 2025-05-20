@@ -732,5 +732,23 @@
       "chosen": "chosen",
       "rejected": "rejected"
     }
+  },
+  "train_ppo": {
+    "file_name": "train_ppo.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "train_reward": {
+    "file_name": "train_reward.json",
+    "ranking": true,
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
   }
 }
