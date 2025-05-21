@@ -10,6 +10,7 @@ do_train: true
 finetuning_type: lora
 lora_rank: 8
 lora_target: all
+gradient_checkpointing: true
 
 ### dataset
 dataset: train_ppo
@@ -17,8 +18,8 @@ template: llama3
 cutoff_len: 2048
 max_samples: 1000
 overwrite_cache: true
-preprocessing_num_workers: 16
-dataloader_num_workers: 16
+preprocessing_num_workers: 12
+dataloader_num_workers: 12
 
 ### output
 output_dir: saves/llama3-8b/lora/ppo
@@ -29,7 +30,7 @@ overwrite_output_dir: true
 report_to: tensorboard  # choices: [none, wandb, tensorboard, swanlab, mlflow]
 
 ### train
-per_device_train_batch_size: 8
+per_device_train_batch_size: 4
 gradient_accumulation_steps: 4
 learning_rate: 1.0e-5
 num_train_epochs: 3
@@ -45,11 +46,11 @@ top_p: 0.9
 
 ### deepspeed
 deepspeed:
-  train_micro_batch_size_per_gpu: 8
+  train_micro_batch_size_per_gpu: 4
   gradient_accumulation_steps: 4
   zero_stage: 2
   offload_optimizer:
-    device: "none"
+    device: "cpu"
     pin_memory: true
   offload_param:
     device: "none"
