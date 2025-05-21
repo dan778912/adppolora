@@ -11,7 +11,7 @@ lora_rank: 8
 lora_target: all
 
 ### dataset
-dataset: ad_reward
+dataset: train_reward
 template: llama3
 cutoff_len: 2048
 max_samples: 1000
@@ -21,7 +21,7 @@ dataloader_num_workers: 4
 
 ### output
 output_dir: saves/llama3-8b/lora/reward
-logging_steps: 10
+logging_steps: 1
 save_steps: 500
 plot_loss: true
 overwrite_output_dir: true

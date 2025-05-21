@@ -12,7 +12,7 @@ lora_rank: 8
 lora_target: all
 
 ### dataset
-dataset: ad_ppo
+dataset: train_ppo
 template: llama3
 cutoff_len: 2048
 max_samples: 1000
