@@ -1,0 +1,914 @@
+[
+  {
+    "query": {
+      "domain": "Electronics",
+      "subdomain": "Audio Interfaces",
+      "query": "\"I'm looking to upgrade my audio interface. I mostly record vocals and acoustic guitar, sometimes a little electric guitar direct in.  My budget is around $500.  I'd like something with at least two XLR inputs and preferably with MIDI in/out.  What would you recommend?  Also, is Thunderbolt really that much better than USB?\""
+    },
+    "ranked_ad_ids": [
+      "a767622a-e5f8-48f9-b026-e960bb488e96",
+      "e2ba2905-e627-4c3a-a235-a3b3d84c4dbc",
+      "29c2202b-3373-49c1-aeac-28acb0e6f562",
+      "016ed0d5-6945-4559-bd3c-e0e530e96ed8",
+      "6b1a01e5-367d-4714-986e-b9703c7c6e05",
+      "76f2e7db-bd63-44c3-b267-1b917bb4631d",
+      "3aaf3c03-6a57-45f5-b3b4-ab1600114d9a",
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17",
+      "3de85a5d-6a98-47b9-83a3-8f1ae1f06681",
+      "4670957e-4a90-4b12-a9ae-e323c9d49fa5"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Electronics",
+      "subdomain": "Software",
+      "query": "\"I'm trying to choose between Arduino and Raspberry Pi for a home automation project.  I need to control some lights, a thermostat, and maybe eventually a sprinkler system.  Which platform would be easier for a beginner and have more readily available software libraries for those kinds of tasks?\""
+    },
+    "ranked_ad_ids": [
+      "603120db-eebf-4ae0-ba62-3b647a9ee872",
+      "7e3b1f87-7ca9-439c-9687-078090ad3c66",
+      "6b1a01e5-367d-4714-986e-b9703c7c6e05",
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17",
+      "f4d0a254-d80a-46e9-b021-9c870b19c8e8",
+      "016ed0d5-6945-4559-bd3c-e0e530e96ed8",
+      "7e02877f-9614-4573-99f0-03694c6a88e4",
+      "576d2d44-ba10-44b8-886b-6cc9e76438c6",
+      "86d7ab9e-bbd1-420b-8159-973c40b75d08",
+      "60259d63-44da-44d7-918a-f4bd83d50098"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Electronics",
+      "subdomain": "Data Storage",
+      "query": "\"Hey, I'm looking to upgrade my data storage for my electronics projects. I'm working with a lot of video and audio files, so I need something fast and reliable but I'm also on a budget. I was thinking maybe an external SSD, but I'm not sure how much space I'll actually need.  Can you give me a rundown of the pros and cons of SSDs versus HDDs for this purpose, and maybe some recommendations for drives around 2TB?\""
+    },
+    "ranked_ad_ids": [
+      "016ed0d5-6945-4559-bd3c-e0e530e96ed8",
+      "6238ed24-f44a-4c5c-9818-a88bf0e9d549",
+      "76f2e7db-bd63-44c3-b267-1b917bb4631d",
+      "576d2d44-ba10-44b8-886b-6cc9e76438c6",
+      "7b1b533a-cd1f-47f4-bfc7-b4d79af0b3a9",
+      "603120db-eebf-4ae0-ba62-3b647a9ee872",
+      "4af9bd0e-989b-4ede-8eda-6058163d59dd",
+      "4670957e-4a90-4b12-a9ae-e323c9d49fa5",
+      "a767622a-e5f8-48f9-b026-e960bb488e96",
+      "113263a7-1f9f-4e94-9ae5-526a075cd5c0"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Electronics",
+      "subdomain": "Video Game Consoles",
+      "query": "\"I'm trying to decide between the Xbox Series X and the PlayStation 5.  I mostly play single-player RPGs and racing games, and I don't really care about VR.  Which one would you recommend, and why?\""
+    },
+    "ranked_ad_ids": [
+      "7e3b1f87-7ca9-439c-9687-078090ad3c66",
+      "4670957e-4a90-4b12-a9ae-e323c9d49fa5",
+      "4321d9ca-de32-48de-a491-aa6b60b99757",
+      "c802d3e6-32e7-4a61-846b-fcd51c56ea52",
+      "76f2e7db-bd63-44c3-b267-1b917bb4631d",
+      "3b176c22-2d4c-4839-bb2b-e4175661c678",
+      "603120db-eebf-4ae0-ba62-3b647a9ee872",
+      "e2ba2905-e627-4c3a-a235-a3b3d84c4dbc",
+      "7b1b533a-cd1f-47f4-bfc7-b4d79af0b3a9",
+      "60259d63-44da-44d7-918a-f4bd83d50098"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Electronics",
+      "subdomain": "Smartphones",
+      "query": "\"Hey, I'm looking to upgrade my phone. I'm on a budget of around $500, need good battery life, and a decent camera for casual photos. I'm not a gamer, so top-end processing power isn't a big deal.  Any recommendations for Android phones that fit the bill?\""
+    },
+    "ranked_ad_ids": [
+      "4af9bd0e-989b-4ede-8eda-6058163d59dd",
+      "603120db-eebf-4ae0-ba62-3b647a9ee872",
+      "576d2d44-ba10-44b8-886b-6cc9e76438c6",
+      "016ed0d5-6945-4559-bd3c-e0e530e96ed8",
+      "c802d3e6-32e7-4a61-846b-fcd51c56ea52",
+      "3b176c22-2d4c-4839-bb2b-e4175661c678",
+      "6238ed24-f44a-4c5c-9818-a88bf0e9d549",
+      "7b1b533a-cd1f-47f4-bfc7-b4d79af0b3a9",
+      "7c8e2ed5-c0d8-4d4e-bba7-d111a66d20aa",
+      "f39efce8-91b7-44af-9263-49d2c20210a7"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Electronics",
+      "subdomain": "Drone Accessories",
+      "query": "\"I'm looking for a new battery for my DJI Mavic 3.  Something with extended flight time, but not too heavy.  Can you recommend a few options and maybe compare their specs, like flight time, weight, and charging time?\""
+    },
+    "ranked_ad_ids": [
+      "5e2ae602-b66b-4b9b-9805-f0bebf9c472a",
+      "c802d3e6-32e7-4a61-846b-fcd51c56ea52",
+      "c826b362-b13b-4504-9a0f-731f06a35974",
+      "016ed0d5-6945-4559-bd3c-e0e530e96ed8",
+      "e2ba2905-e627-4c3a-a235-a3b3d84c4dbc",
+      "7e3b1f87-7ca9-439c-9687-078090ad3c66",
+      "85397168-6560-4161-a2a5-d3a40071fab7",
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17",
+      "5dea1cdb-a381-42db-a4bd-a0ecb5c885ef",
+      "5f9b17a1-c3ae-4669-890a-ca4ddeb5de28"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Electronics",
+      "subdomain": "Computer Components",
+      "query": "\"Hey, I'm building a PC and I'm trying to decide between an Intel i5-13600K and a Ryzen 7 7700X.  I'm mostly going to be using it for gaming at 1440p, but I also do some video editing and light streaming. Which CPU would you recommend and why?  Also, what kind of motherboard would I need for each?\""
+    },
+    "ranked_ad_ids": [
+      "3b176c22-2d4c-4839-bb2b-e4175661c678",
+      "6238ed24-f44a-4c5c-9818-a88bf0e9d549",
+      "76f2e7db-bd63-44c3-b267-1b917bb4631d",
+      "4670957e-4a90-4b12-a9ae-e323c9d49fa5",
+      "603120db-eebf-4ae0-ba62-3b647a9ee872",
+      "576d2d44-ba10-44b8-886b-6cc9e76438c6",
+      "e38459bc-7f2a-4f15-aa1e-32a976ea89ee",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "7b1b533a-cd1f-47f4-bfc7-b4d79af0b3a9",
+      "3de85a5d-6a98-47b9-83a3-8f1ae1f06681"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Electronics",
+      "subdomain": "Car Electronics",
+      "query": "\"My car's infotainment system is constantly freezing up. It's a 2021 Honda CRV.  I've tried restarting the car, but it keeps happening. Any ideas what could be causing this and how to fix it without having to go to the dealership?\""
+    },
+    "ranked_ad_ids": [
+      "f39efce8-91b7-44af-9263-49d2c20210a7",
+      "4670957e-4a90-4b12-a9ae-e323c9d49fa5",
+      "8b1323c3-408b-4384-9002-bfa853417df1",
+      "603120db-eebf-4ae0-ba62-3b647a9ee872",
+      "5ec63106-d517-4ded-932a-25a2d9fbe879",
+      "ced056c0-ccdf-48c3-9d41-f1e9ae764364",
+      "38693b35-9a6e-4537-ab79-ed5303b538bd",
+      "71a55963-bb0a-40fe-8716-21dad878cc0c",
+      "32b7ff2f-ebb6-4dda-9ae2-ae6a9b84831a",
+      "c0c079d4-a1b2-4c77-b8f5-14a94681c4f1"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Electronics",
+      "subdomain": "Cameras",
+      "query": "\"I'm looking for a camera that's good for vlogging and also taking still photos while I travel.  I'd like something relatively compact, 4K video would be great, and ideally under $1500.  What are some good options, and what are the key differences between them?\""
+    },
+    "ranked_ad_ids": [
+      "f39efce8-91b7-44af-9263-49d2c20210a7",
+      "c826b362-b13b-4504-9a0f-731f06a35974",
+      "c802d3e6-32e7-4a61-846b-fcd51c56ea52",
+      "4af9bd0e-989b-4ede-8eda-6058163d59dd",
+      "576d2d44-ba10-44b8-886b-6cc9e76438c6",
+      "7c8e2ed5-c0d8-4d4e-bba7-d111a66d20aa",
+      "6238ed24-f44a-4c5c-9818-a88bf0e9d549",
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17",
+      "f4d0a254-d80a-46e9-b021-9c870b19c8e8",
+      "603120db-eebf-4ae0-ba62-3b647a9ee872"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Electronics",
+      "subdomain": "Movies & TV",
+      "query": "\"My new Samsung TV has built-in Netflix, but I can't seem to get Dolby Atmos working when I watch movies.  It plays regular 5.1 surround sound just fine. Is there some setting I need to change on the TV or in the Netflix app itself?\""
+    },
+    "ranked_ad_ids": [
+      "7b1b533a-cd1f-47f4-bfc7-b4d79af0b3a9",
+      "4af9bd0e-989b-4ede-8eda-6058163d59dd",
+      "016ed0d5-6945-4559-bd3c-e0e530e96ed8",
+      "26526b1b-b9ba-4e36-b80f-835d90ff3eb5",
+      "92fe97b1-b554-41af-82e2-99c4b2a911db",
+      "bb0ad5b2-618f-485e-bc0a-f8bd8c36f149",
+      "d6d1aea9-5b1f-454f-8076-97c7fcb78d99",
+      "603120db-eebf-4ae0-ba62-3b647a9ee872",
+      "7e02877f-9614-4573-99f0-03694c6a88e4",
+      "79aba7b2-ff0f-4a7d-b619-376eabb7a2ab"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Fashion",
+      "subdomain": "Bags & Purses",
+      "query": "\"I'm looking for a versatile black bag, something I can use for work and going out.  I'd prefer vegan leather and it needs to be big enough for a 13-inch laptop but not bulky.  Maybe something with a crossbody strap? Price range ideally under $200. Any recommendations?\""
+    },
+    "ranked_ad_ids": [
+      "29c2202b-3373-49c1-aeac-28acb0e6f562",
+      "27b473cc-d0d8-44ab-b325-afebb5f322d0",
+      "35f9073c-ccc5-4a74-b876-b5dd2161ca3e",
+      "eae96f2d-3322-4484-ac6d-d642b52d4c20",
+      "140c14b9-bfc3-4903-b152-df1c86a182b7",
+      "bfc96a5c-b11e-481c-80f8-c43f5d0fb209",
+      "0b4f2412-eb4e-4cd8-8080-976d16b3b4e7",
+      "fededefd-7c1e-4dcc-be2d-4d3c90315e00",
+      "4b043a71-41d5-42a4-aeb2-864dadc2c160",
+      "79b246eb-706c-4f99-b7f1-aadc45d963ec"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Fashion",
+      "subdomain": "Accessories",
+      "query": "\"I'm going to a wedding next month - it's semi-formal, outdoor, garden party vibe.  The dress I'm wearing is pale blue, flowy, and knee-length. What kind of accessories \u2013 like jewelry, shoes, bag \u2013 would complement it without looking too overdone?\""
+    },
+    "ranked_ad_ids": [
+      "42e96bfe-3236-46b4-9d08-9fa56bde0d89",
+      "bb0ad5b2-618f-485e-bc0a-f8bd8c36f149",
+      "cd4d3d46-4755-4582-a077-4eea8e9640bc",
+      "27b473cc-d0d8-44ab-b325-afebb5f322d0",
+      "be05322e-4507-45c4-bca3-c064899a7305",
+      "0dea53a3-eccf-46ed-a314-ecb4b755f22f",
+      "fededefd-7c1e-4dcc-be2d-4d3c90315e00",
+      "140c14b9-bfc3-4903-b152-df1c86a182b7",
+      "d5cb96db-0ae2-4b48-838a-525ab552626b",
+      "4ba58189-4cde-462d-938c-1ca2eb71ea13"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Fashion",
+      "subdomain": "Dresses",
+      "query": "\"I'm looking for a dress for a summer wedding. It's outdoors, semi-formal, and I'd prefer something flowy and not too bright.  Maybe a pastel or a floral print? I'm also on a budget, ideally under $200.  Got any ideas?\""
+    },
+    "ranked_ad_ids": [
+      "42e96bfe-3236-46b4-9d08-9fa56bde0d89",
+      "d5cb96db-0ae2-4b48-838a-525ab552626b",
+      "5118c28b-6341-475b-aa67-a8ea7c7e6e46",
+      "cd4d3d46-4755-4582-a077-4eea8e9640bc",
+      "bb0ad5b2-618f-485e-bc0a-f8bd8c36f149",
+      "be05322e-4507-45c4-bca3-c064899a7305",
+      "8d5846e9-86c7-42af-bf2e-a2a3127d50da",
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "e7998b59-dc2f-491d-b551-54b13a59214b",
+      "11721280-32e2-47db-be01-25affcbba3a5"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Fashion",
+      "subdomain": "Men's Shoes",
+      "query": "\"I'm looking for some stylish but comfortable men's shoes for a wedding. It's semi-formal, outdoor, and I'll be on my feet a lot. I don't want typical dress shoes.  Maybe something like a loafer or a nice boot, but breathable.  Got any recommendations?\""
+    },
+    "ranked_ad_ids": [
+      "04777bec-aa05-4aed-8125-d9084501f411",
+      "d64bb61a-476c-408d-89f8-c90164f64f64",
+      "42e96bfe-3236-46b4-9d08-9fa56bde0d89",
+      "d20548e3-36ae-4cb4-a724-9300f0e20e56",
+      "8eef6370-599a-4a1b-8d4b-a124707016ab",
+      "0fdc2995-0631-46ce-8c75-6a91e2836074",
+      "fededefd-7c1e-4dcc-be2d-4d3c90315e00",
+      "67d487f7-8f9d-45e3-aabc-5da9e17238d4",
+      "2aa08b6f-6bb4-4f9a-8d0e-fcd040b5fce4",
+      "2f01b0d9-b625-4327-a673-d26a18c422cf"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Fashion",
+      "subdomain": "Kids' Clothing",
+      "query": "\"My daughter's birthday is coming up and she's really into unicorns right now. Can you help me find some fun unicorn-themed outfits for a 7-year-old?  I'm looking for something that isn't too cheesy, maybe more like a subtle unicorn print or a sparkly pastel look, not a full-on costume.  Ideally, under $50 for the whole outfit, and somewhere I can buy it online.\""
+    },
+    "ranked_ad_ids": [
+      "01bfb5aa-1418-40e5-b8b6-397b771399bd",
+      "c385d97c-5374-47fa-9549-c13341cbe986",
+      "42e96bfe-3236-46b4-9d08-9fa56bde0d89",
+      "5ec63106-d517-4ded-932a-25a2d9fbe879",
+      "fededefd-7c1e-4dcc-be2d-4d3c90315e00",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "5c6c7516-d36e-412c-8579-a884797a1d38",
+      "66d70823-859f-4afd-ac1b-f2b35e07bc42",
+      "9ae1f04c-6834-4204-aeed-d6a70edc9ff8",
+      "638e9327-c03a-4f5f-848f-ac18b854d9db"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Fashion",
+      "subdomain": "Men's Clothing",
+      "query": "\"I have a wedding to go to next month \u2013 it's semi-formal, outdoor, and in the evening. I'm thinking a suit, but not sure what color or fabric would be best for an October wedding in the Midwest.  Could you give me some options and maybe some examples I could look at online?\""
+    },
+    "ranked_ad_ids": [
+      "42e96bfe-3236-46b4-9d08-9fa56bde0d89",
+      "0dea53a3-eccf-46ed-a314-ecb4b755f22f",
+      "bb0ad5b2-618f-485e-bc0a-f8bd8c36f149",
+      "d5cb96db-0ae2-4b48-838a-525ab552626b",
+      "fededefd-7c1e-4dcc-be2d-4d3c90315e00",
+      "638e9327-c03a-4f5f-848f-ac18b854d9db",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "5ec63106-d517-4ded-932a-25a2d9fbe879",
+      "5118c28b-6341-475b-aa67-a8ea7c7e6e46"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Fashion",
+      "subdomain": "Women's Clothing",
+      "query": "\"I have a wedding to go to next month and I'm looking for a dress. It's a semi-formal outdoor wedding in the late afternoon/early evening.  I'd like something flowy and comfortable, maybe in a pastel color, but nothing too girly. I'm also on a budget, ideally under $200.  Can you help me find some options?\""
+    },
+    "ranked_ad_ids": [
+      "42e96bfe-3236-46b4-9d08-9fa56bde0d89",
+      "cd4d3d46-4755-4582-a077-4eea8e9640bc",
+      "bb0ad5b2-618f-485e-bc0a-f8bd8c36f149",
+      "0dea53a3-eccf-46ed-a314-ecb4b755f22f",
+      "5118c28b-6341-475b-aa67-a8ea7c7e6e46",
+      "d5cb96db-0ae2-4b48-838a-525ab552626b",
+      "638e9327-c03a-4f5f-848f-ac18b854d9db",
+      "fededefd-7c1e-4dcc-be2d-4d3c90315e00",
+      "aad76614-99c5-4bbf-aa8a-5fcfcb32bbf7",
+      "11721280-32e2-47db-be01-25affcbba3a5"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Outdoor Decor",
+      "query": "\"I'm looking to revamp my patio. It's pretty small, maybe 10x12 feet, and gets a lot of afternoon sun. I like a modern farmhouse vibe, but I'm on a budget. Can you suggest some outdoor decor ideas, including furniture, lighting, and maybe some DIY projects to add some personality?\""
+    },
+    "ranked_ad_ids": [
+      "7305dcdb-d2d8-4ca2-9976-1ef7da1c6986",
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "f9e3f6bd-39c1-4cf7-bc0a-4cebf77754ba",
+      "8100755a-2945-415b-9fbd-e64cb135c7da",
+      "be05322e-4507-45c4-bca3-c064899a7305",
+      "eae96f2d-3322-4484-ac6d-d642b52d4c20",
+      "fce6f5f5-3756-4f8b-a044-37b33d5bed8e",
+      "66d70823-859f-4afd-ac1b-f2b35e07bc42",
+      "60259d63-44da-44d7-918a-f4bd83d50098"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Crafts",
+      "query": "\"I'm trying to upcycle some old glass jars into something useful for my kitchen. I'm not super crafty, so I need something relatively easy.  Do you have any project ideas that use mason jars and maybe some other common household items?  Ideally, I'd like to make something I can use to organize spices or utensils.\""
+    },
+    "ranked_ad_ids": [
+      "6bd92c10-ecab-478f-ba74-81c6c8d9f72f",
+      "df054bb1-893b-417f-8016-e88f9322d76d",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "30f25eaa-887d-4956-af06-f10450aec32d",
+      "be05322e-4507-45c4-bca3-c064899a7305",
+      "7305dcdb-d2d8-4ca2-9976-1ef7da1c6986",
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "42e96bfe-3236-46b4-9d08-9fa56bde0d89",
+      "9c35c37c-a939-4a78-b336-5716433e6b6c",
+      "39902335-37e0-43f3-a408-364f3690a782"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Outdoor Furniture",
+      "query": "\"I'm looking for a patio dining set that can seat at least 6 people, is weather-resistant, and preferably under $1500.  I like a modern farmhouse look. Any recommendations?\""
+    },
+    "ranked_ad_ids": [
+      "eae96f2d-3322-4484-ac6d-d642b52d4c20",
+      "a7db3280-5739-4902-a1f0-e4f372aedfba",
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17",
+      "337185b2-e6e2-481f-9117-669b6d7f9507",
+      "f9e3f6bd-39c1-4cf7-bc0a-4cebf77754ba",
+      "42e96bfe-3236-46b4-9d08-9fa56bde0d89",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "60259d63-44da-44d7-918a-f4bd83d50098",
+      "bfc96a5c-b11e-481c-80f8-c43f5d0fb209",
+      "4caeee2e-8ec1-46d0-a2d4-e0ffa782a872"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Plumbing",
+      "query": "\"My kitchen sink is draining really slowly and making gurgling sounds.  I've tried a plunger and some drain cleaner, but nothing seems to be working.  Is there anything else I can try myself before calling a plumber?  Maybe something involving baking soda or vinegar? I'm worried about a clog further down the line.\""
+    },
+    "ranked_ad_ids": [
+      "c2958216-885a-43c9-8ff5-e565fea1ea4d",
+      "f9e4a306-b12b-4944-9ac6-e4565d36bd53",
+      "32376356-f1e7-43e7-8922-86745fc8e4a1",
+      "072d5bd2-94d2-42e9-9343-a6eea2a16f59",
+      "29f7161b-c252-4ce5-854e-d6301823836c",
+      "4af9bd0e-989b-4ede-8eda-6058163d59dd",
+      "bf2975f4-18b4-4a74-a8ae-74b6c5dda6ed",
+      "cc323296-1749-46b1-bb10-77d76209aa0f",
+      "a767622a-e5f8-48f9-b026-e960bb488e96",
+      "231bf0d0-5b29-42ba-b16f-c9adffe57e3b"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Cleaning Supplies",
+      "query": "\"I have ceramic tile floors throughout my house and two big dogs that shed like crazy. What's the best type of mop and cleaning solution to keep things clean without damaging the tile or leaving streaks?\""
+    },
+    "ranked_ad_ids": [
+      "4dce22e3-b29d-425d-9009-da1fc68ce892",
+      "c2958216-885a-43c9-8ff5-e565fea1ea4d",
+      "4faf8058-1792-44d9-9cbb-f0f3b97a75c3",
+      "113263a7-1f9f-4e94-9ae5-526a075cd5c0",
+      "ced056c0-ccdf-48c3-9d41-f1e9ae764364",
+      "bf2975f4-18b4-4a74-a8ae-74b6c5dda6ed",
+      "79b246eb-706c-4f99-b7f1-aadc45d963ec",
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "8100755a-2945-415b-9fbd-e64cb135c7da",
+      "821c19f2-c65c-46ec-9866-8f3d70b43c04"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Tools",
+      "query": "\"My deck needs a new coat of stain, but I'm not sure what kind of sprayer to use.  I've got a pretty large deck, so something efficient would be great.  What are my options, and do you have any recommendations for a good sprayer for a large deck staining project?\""
+    },
+    "ranked_ad_ids": [
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "7305dcdb-d2d8-4ca2-9976-1ef7da1c6986",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "5df075df-f938-4de2-965a-354109b43b09",
+      "32376356-f1e7-43e7-8922-86745fc8e4a1",
+      "3aaf1444-3911-4313-9c83-c579e626d7d9",
+      "d5cb96db-0ae2-4b48-838a-525ab552626b",
+      "d74afb48-f54b-496b-815f-3328c1db04b5",
+      "8d5846e9-86c7-42af-bf2e-a2a3127d50da",
+      "c6c2b97d-263d-4658-9fd5-4b63dff7e2cc"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Heating & Cooling",
+      "query": "\"My central AC is blowing cold air, but it's not cooling down my upstairs as well as it used to. It's a two-story house, and the downstairs is perfectly comfortable.  Could it be low on refrigerant, or is there something else I should check before calling an HVAC technician?  It's getting really hot, so I'd like to try and troubleshoot it myself if possible.\""
+    },
+    "ranked_ad_ids": [
+      "8b1323c3-408b-4384-9002-bfa853417df1",
+      "92fe97b1-b554-41af-82e2-99c4b2a911db",
+      "4b03b001-5781-46d4-ac2c-9d4aff2de46c",
+      "76f2e7db-bd63-44c3-b267-1b917bb4631d",
+      "baca3f24-9a27-4533-b680-eadc213bf7f2",
+      "3b176c22-2d4c-4839-bb2b-e4175661c678",
+      "3de85a5d-6a98-47b9-83a3-8f1ae1f06681",
+      "29f7161b-c252-4ce5-854e-d6301823836c",
+      "bf2975f4-18b4-4a74-a8ae-74b6c5dda6ed",
+      "6238ed24-f44a-4c5c-9818-a88bf0e9d549"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Kitchen & Dining",
+      "query": "\"My kitchen is pretty small, maybe 10x12 feet, and it's kind of a galley style.  I'm thinking of repainting and maybe getting new countertops.  Do you have any ideas for making it feel bigger and brighter?  I'm open to suggestions for colors, lighting, and even small layout tweaks if possible. I really like a modern farmhouse vibe but I also want it to be practical and easy to clean since I have two toddlers.\""
+    },
+    "ranked_ad_ids": [
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "df054bb1-893b-417f-8016-e88f9322d76d",
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "f9e3f6bd-39c1-4cf7-bc0a-4cebf77754ba",
+      "7e02877f-9614-4573-99f0-03694c6a88e4",
+      "fce6f5f5-3756-4f8b-a044-37b33d5bed8e",
+      "4caeee2e-8ec1-46d0-a2d4-e0ffa782a872",
+      "7305dcdb-d2d8-4ca2-9976-1ef7da1c6986",
+      "da33c395-4afc-44f7-bbf7-234dbb157f80",
+      "be05322e-4507-45c4-bca3-c064899a7305"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Pet Supplies",
+      "query": "\"My golden retriever sheds a *ton*, especially in the spring.  I'm looking for a good, preferably self-cleaning, brush for him, and maybe something to help minimize the shedding overall.  He's got a pretty thick double coat. Any recommendations within a reasonable price range, say under $50 for the brush?  I'm also in the market for new food and water bowls that won't slide around when he eats.  He's a messy eater!\""
+    },
+    "ranked_ad_ids": [
+      "9ae1f04c-6834-4204-aeed-d6a70edc9ff8",
+      "4faf8058-1792-44d9-9cbb-f0f3b97a75c3",
+      "96543a46-21d9-41e9-a101-71d7c8a316ec",
+      "df054bb1-893b-417f-8016-e88f9322d76d",
+      "c2958216-885a-43c9-8ff5-e565fea1ea4d",
+      "27dbae42-e430-4c91-81db-8803c8478669",
+      "a81790af-0115-45db-aa0f-4147d833c7cb",
+      "113263a7-1f9f-4e94-9ae5-526a075cd5c0",
+      "c385d97c-5374-47fa-9549-c13341cbe986",
+      "aba9cfbf-0551-483f-948e-3e86e9976e1c"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Living Room Furniture",
+      "query": "\"I'm looking to revamp my living room.  It's a fairly small space, maybe 12x15 feet, with a big window on one wall. I love the mid-century modern style but I'm worried it might be too bulky. Can you suggest some living room furniture pieces that would fit the space, stick to that aesthetic, and ideally, wouldn't break the bank?\""
+    },
+    "ranked_ad_ids": [
+      "982583d5-bb90-4881-a902-15b2b7cbbc97",
+      "da33c395-4afc-44f7-bbf7-234dbb157f80",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "437e988e-7dd4-441e-8f0e-c0e381a18b4f",
+      "f9e3f6bd-39c1-4cf7-bc0a-4cebf77754ba",
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "4caeee2e-8ec1-46d0-a2d4-e0ffa782a872",
+      "2e2192ee-b154-4fe0-8cab-c8f41a3ed2c5",
+      "337185b2-e6e2-481f-9117-669b6d7f9507",
+      "a40112d7-23b9-4b71-96b8-d4ff81ee40de"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Lighting",
+      "query": "\"I'm redoing my kitchen and I want to layer the lighting.  I have some recessed lights already, but I want to add under-cabinet lighting and maybe some pendants over the island.  Can you give me some ideas for what kind of fixtures would look good together and what kind of bulbs I should use for each?  I'm going for a modern farmhouse vibe.\""
+    },
+    "ranked_ad_ids": [
+      "7e02877f-9614-4573-99f0-03694c6a88e4",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "da33c395-4afc-44f7-bbf7-234dbb157f80",
+      "42e96bfe-3236-46b4-9d08-9fa56bde0d89",
+      "7305dcdb-d2d8-4ca2-9976-1ef7da1c6986",
+      "66d70823-859f-4afd-ac1b-f2b35e07bc42",
+      "e7998b59-dc2f-491d-b551-54b13a59214b",
+      "d6d1aea9-5b1f-454f-8076-97c7fcb78d99",
+      "be05322e-4507-45c4-bca3-c064899a7305"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Curtains & Window Treatments",
+      "query": "\"My living room has a huge south-facing window, and it gets absolutely blasted with sun in the afternoon.  I want something that blocks the light and heat but still looks nice and doesn't make the room feel like a cave. What kind of curtains or blinds would you recommend?  I'm open to anything, but I'm not a huge fan of heavy, ornate drapes.\""
+    },
+    "ranked_ad_ids": [
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "7e02877f-9614-4573-99f0-03694c6a88e4",
+      "da33c395-4afc-44f7-bbf7-234dbb157f80",
+      "f9e3f6bd-39c1-4cf7-bc0a-4cebf77754ba",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "c6c2b97d-263d-4658-9fd5-4b63dff7e2cc",
+      "c9526dba-05d1-417a-9abc-3f92b2d8b5e4",
+      "7305dcdb-d2d8-4ca2-9976-1ef7da1c6986",
+      "9ae1f04c-6834-4204-aeed-d6a70edc9ff8",
+      "3de85a5d-6a98-47b9-83a3-8f1ae1f06681"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Flooring",
+      "query": "\"We're renovating our kitchen and I'm overwhelmed by flooring options.  It's a high-traffic area, we have two dogs, and I'd love something that looks like real wood but is more durable and waterproof.  Our style is kind of modern farmhouse.  What are some good flooring choices I should be looking at, and what are the pros and cons of each?\""
+    },
+    "ranked_ad_ids": [
+      "4dce22e3-b29d-425d-9009-da1fc68ce892",
+      "79b246eb-706c-4f99-b7f1-aadc45d963ec",
+      "27dbae42-e430-4c91-81db-8803c8478669",
+      "40c5fab7-fc5b-4155-9ffc-6194734b3ec7",
+      "ced056c0-ccdf-48c3-9d41-f1e9ae764364",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "982583d5-bb90-4881-a902-15b2b7cbbc97",
+      "60259d63-44da-44d7-918a-f4bd83d50098",
+      "4caeee2e-8ec1-46d0-a2d4-e0ffa782a872",
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Food & Beverage",
+      "query": "\"My basil plant is absolutely thriving this year in my garden, but I have so much I don't know what to do with it all!  Can you give me some recipes for using fresh basil, maybe focusing on cocktails or drinks I could make for a summer party?\""
+    },
+    "ranked_ad_ids": [
+      "cc323296-1749-46b1-bb10-77d76209aa0f",
+      "be05322e-4507-45c4-bca3-c064899a7305",
+      "7305dcdb-d2d8-4ca2-9976-1ef7da1c6986",
+      "5d2d4755-281b-4c40-91a1-6f57d9a2ecef",
+      "6bd92c10-ecab-478f-ba74-81c6c8d9f72f",
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "e7998b59-dc2f-491d-b551-54b13a59214b",
+      "5ff3ef3a-ade4-4f85-8752-d2ba93359310",
+      "aba9cfbf-0551-483f-948e-3e86e9976e1c",
+      "b9a18a45-7105-42bf-8c2e-e6cff3c26190"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Home & Garden",
+      "subdomain": "Child Safety",
+      "query": "\"We're redoing our backyard landscaping and I'm worried about some of the plants we're considering. Are there any common landscaping plants that are toxic to kids if they eat them?  We have a toddler who puts everything in his mouth, so I want to make sure we create a safe space for him to play.\""
+    },
+    "ranked_ad_ids": [
+      "750d31b0-181c-4170-a3b9-f6191a24dc69",
+      "7305dcdb-d2d8-4ca2-9976-1ef7da1c6986",
+      "cc323296-1749-46b1-bb10-77d76209aa0f",
+      "8100755a-2945-415b-9fbd-e64cb135c7da",
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17",
+      "ec0d8f4f-dc27-44aa-ad53-c87d043c78bf",
+      "60259d63-44da-44d7-918a-f4bd83d50098",
+      "f9e3f6bd-39c1-4cf7-bc0a-4cebf77754ba",
+      "abe60550-b29f-4a0b-aa1a-f3529b3d0d5c",
+      "b9a18a45-7105-42bf-8c2e-e6cff3c26190"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Sports & Outdoors",
+      "subdomain": "Fishing",
+      "query": "\"I'm going fishing in Lake Tahoe next week, and I'm targeting trout. What kind of lures or bait should I use this time of year, and are there any specific areas of the lake that are known for good trout fishing?\""
+    },
+    "ranked_ad_ids": [
+      "29c2202b-3373-49c1-aeac-28acb0e6f562",
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17",
+      "a7db3280-5739-4902-a1f0-e4f372aedfba",
+      "85397168-6560-4161-a2a5-d3a40071fab7",
+      "7e02877f-9614-4573-99f0-03694c6a88e4",
+      "a767622a-e5f8-48f9-b026-e960bb488e96",
+      "bf6ca017-a8ab-4d5e-9a46-2ea78a7d65bd",
+      "a02fe8fe-d736-426e-acf4-14c5f245f794",
+      "6b282d84-ae26-46fe-9865-6c349fe84216",
+      "c802d3e6-32e7-4a61-846b-fcd51c56ea52"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Sports & Outdoors",
+      "subdomain": "Motorcycle Accessories",
+      "query": "\"I'm looking for heated grips for my motorcycle, something that works well in really cold weather but doesn't break the bank.  I ride a 2021 Honda Shadow. Any recommendations?  Oh, and I'd prefer something that doesn't require a ton of wiring work to install.\""
+    },
+    "ranked_ad_ids": [
+      "32b7ff2f-ebb6-4dda-9ae2-ae6a9b84831a",
+      "8eef6370-599a-4a1b-8d4b-a124707016ab",
+      "a2dd8fa9-78c3-4897-8173-f602fd6e3806",
+      "458def16-3fb2-48d8-b731-63b85410a6ed",
+      "f4d0a254-d80a-46e9-b021-9c870b19c8e8",
+      "27b473cc-d0d8-44ab-b325-afebb5f322d0",
+      "8b1323c3-408b-4384-9002-bfa853417df1",
+      "6b282d84-ae26-46fe-9865-6c349fe84216",
+      "82aed34c-a9f5-4edc-a7bf-0f349d4af996",
+      "fededefd-7c1e-4dcc-be2d-4d3c90315e00"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Sports & Outdoors",
+      "subdomain": "Hunting & Shooting",
+      "query": "\"I'm going deer hunting in the Northeast next fall, probably Vermont or New Hampshire.  I've never hunted whitetail in that terrain before. What caliber rifle would you recommend, and what kind of scope and other gear should I look at getting? I'm on a bit of a budget, so nothing too crazy expensive.  Also, any tips for hunting in mountainous, wooded areas would be appreciated!\""
+    },
+    "ranked_ad_ids": [
+      "c802d3e6-32e7-4a61-846b-fcd51c56ea52",
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17",
+      "5dea1cdb-a381-42db-a4bd-a0ecb5c885ef",
+      "f8d0eae8-3139-49b4-8487-ac86b3baec55",
+      "8100755a-2945-415b-9fbd-e64cb135c7da",
+      "c5e45098-ed90-4b0b-b9b3-ac70f6e6f3b1",
+      "29c2202b-3373-49c1-aeac-28acb0e6f562",
+      "bfc96a5c-b11e-481c-80f8-c43f5d0fb209",
+      "a767622a-e5f8-48f9-b026-e960bb488e96",
+      "7c8e2ed5-c0d8-4d4e-bba7-d111a66d20aa"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Sports & Outdoors",
+      "subdomain": "Kayaking",
+      "query": "\"I'm planning a kayaking trip down the Colorado River in the Grand Canyon next summer.  Can you give me some advice on what kind of kayak I should be looking at, essential gear I'll need, and maybe some reputable outfitters that run guided tours in that area?\""
+    },
+    "ranked_ad_ids": [
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17",
+      "eae96f2d-3322-4484-ac6d-d642b52d4c20",
+      "8eef6370-599a-4a1b-8d4b-a124707016ab",
+      "7e02877f-9614-4573-99f0-03694c6a88e4",
+      "49c3776d-e0a9-4193-944a-c5652c018eb3",
+      "a767622a-e5f8-48f9-b026-e960bb488e96",
+      "c802d3e6-32e7-4a61-846b-fcd51c56ea52",
+      "bfc96a5c-b11e-481c-80f8-c43f5d0fb209",
+      "29c2202b-3373-49c1-aeac-28acb0e6f562",
+      "27b473cc-d0d8-44ab-b325-afebb5f322d0"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Sports & Outdoors",
+      "subdomain": "Exercise & Fitness",
+      "query": "\"I'm trying to build muscle but I'm a vegetarian.  Can you suggest a high-protein vegetarian meal plan for a week that also incorporates strength training exercises I can do at home without equipment?\""
+    },
+    "ranked_ad_ids": [
+      "cc323296-1749-46b1-bb10-77d76209aa0f",
+      "5d2d4755-281b-4c40-91a1-6f57d9a2ecef",
+      "a81790af-0115-45db-aa0f-4147d833c7cb",
+      "aba9cfbf-0551-483f-948e-3e86e9976e1c",
+      "e38459bc-7f2a-4f15-aa1e-32a976ea89ee",
+      "19a98328-e503-4cfc-bbea-eb0c6ebe32eb",
+      "39656321-cd0b-41bf-a1d3-439329ced512",
+      "458def16-3fb2-48d8-b731-63b85410a6ed",
+      "4b11503c-5aef-44e1-9357-b358e365b753",
+      "3b176c22-2d4c-4839-bb2b-e4175661c678"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Healthcare",
+      "subdomain": "Oral Care",
+      "query": "\"My dentist told me I have gingivitis and I need to floss more.  But I really struggle to floss regularly \u2013 it's uncomfortable and I often bleed. Do you have any tips or tricks to make flossing easier and less painful, and maybe some advice on building a better flossing habit?\""
+    },
+    "ranked_ad_ids": [
+      "072d5bd2-94d2-42e9-9343-a6eea2a16f59",
+      "9c35c37c-a939-4a78-b336-5716433e6b6c",
+      "cc323296-1749-46b1-bb10-77d76209aa0f",
+      "9dc33c04-7f14-482f-8879-76581bb24df3",
+      "5dea1cdb-a381-42db-a4bd-a0ecb5c885ef",
+      "c2958216-885a-43c9-8ff5-e565fea1ea4d",
+      "231bf0d0-5b29-42ba-b16f-c9adffe57e3b",
+      "32376356-f1e7-43e7-8922-86745fc8e4a1",
+      "c0c079d4-a1b2-4c77-b8f5-14a94681c4f1",
+      "700ce16d-e460-4091-9816-2835ddee6065"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Healthcare",
+      "subdomain": "Skincare",
+      "query": "\"My skin has been super dry and flaky lately, even though I'm drinking plenty of water.  I'm currently using a cleanser, toner, and moisturizer, but nothing seems to be helping.  What ingredients should I look for in a good hydrating serum or cream, and are there any lifestyle changes I could make that might help?  I have combination skin, by the way \u2013 oily in my T-zone but dry everywhere else.\""
+    },
+    "ranked_ad_ids": [
+      "79f04280-b9ea-490e-a80f-efbee363dcbf",
+      "072d5bd2-94d2-42e9-9343-a6eea2a16f59",
+      "06b0a6cf-69bd-4b26-8f32-6adc68cfd16a",
+      "48c44931-40e8-4eae-a5e5-3bba1922e19f",
+      "8eef6370-599a-4a1b-8d4b-a124707016ab",
+      "a767622a-e5f8-48f9-b026-e960bb488e96",
+      "cc323296-1749-46b1-bb10-77d76209aa0f",
+      "a5456eb6-574c-4c91-b420-dad64b3ed811",
+      "5d2d4755-281b-4c40-91a1-6f57d9a2ecef",
+      "e38459bc-7f2a-4f15-aa1e-32a976ea89ee"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Healthcare",
+      "subdomain": "Footcare",
+      "query": "\"My heels are constantly dry and cracked, especially in the winter.  I've tried lotions, but nothing seems to work long-term.  Are there any specific ingredients I should look for, or maybe some home remedies that are actually effective? And is this something I should see a podiatrist about, or can I usually manage it myself?\""
+    },
+    "ranked_ad_ids": [
+      "04777bec-aa05-4aed-8125-d9084501f411",
+      "d64bb61a-476c-408d-89f8-c90164f64f64",
+      "8eef6370-599a-4a1b-8d4b-a124707016ab",
+      "ebe94d6a-4c00-4b10-8641-e0345a48a29a",
+      "78e95221-a224-43d0-8098-50c5805cfe5d",
+      "0fdc2995-0631-46ce-8c75-6a91e2836074",
+      "67d487f7-8f9d-45e3-aabc-5da9e17238d4",
+      "d20548e3-36ae-4cb4-a724-9300f0e20e56",
+      "2f01b0d9-b625-4327-a673-d26a18c422cf",
+      "5ec63106-d517-4ded-932a-25a2d9fbe879"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Healthcare",
+      "subdomain": "Supplements",
+      "query": "\"I'm trying to improve my gut health and I've heard prebiotics and probiotics can help.  Can you explain the difference between the two and recommend some good supplement brands that are reputable and have minimal added ingredients?  I'm also a vegetarian, so ideally something that aligns with that.\""
+    },
+    "ranked_ad_ids": [
+      "4b11503c-5aef-44e1-9357-b358e365b753",
+      "cc323296-1749-46b1-bb10-77d76209aa0f",
+      "a81790af-0115-45db-aa0f-4147d833c7cb",
+      "8100755a-2945-415b-9fbd-e64cb135c7da",
+      "5dea1cdb-a381-42db-a4bd-a0ecb5c885ef",
+      "19a98328-e503-4cfc-bbea-eb0c6ebe32eb",
+      "aba9cfbf-0551-483f-948e-3e86e9976e1c",
+      "e38459bc-7f2a-4f15-aa1e-32a976ea89ee",
+      "5d2d4755-281b-4c40-91a1-6f57d9a2ecef",
+      "8b1323c3-408b-4384-9002-bfa853417df1"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Healthcare",
+      "subdomain": "Mobility Aids",
+      "query": "\"My grandmother is starting to have trouble getting around the house, and I'm thinking she might need a mobility aid.  She's pretty independent and doesn't want something too bulky or obvious. What are some good options that might help her stay mobile and also maintain her dignity?  Maybe something lightweight she could use indoors and outdoors?\""
+    },
+    "ranked_ad_ids": [
+      "61ea5b78-0268-41f7-9a1f-0df3eeac0859",
+      "baca3f24-9a27-4533-b680-eadc213bf7f2",
+      "a7db3280-5739-4902-a1f0-e4f372aedfba",
+      "d64bb61a-476c-408d-89f8-c90164f64f64",
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17",
+      "0fdc2995-0631-46ce-8c75-6a91e2836074",
+      "67d487f7-8f9d-45e3-aabc-5da9e17238d4",
+      "5c6c7516-d36e-412c-8579-a884797a1d38",
+      "9314f21e-2124-4c1c-8873-76d473706b81",
+      "27b473cc-d0d8-44ab-b325-afebb5f322d0"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Automotive",
+      "subdomain": "Car Parts & Accessories",
+      "query": "\"My 2018 Honda Civic's check engine light just came on, and I think it might be the catalytic converter.  Can you tell me what the typical symptoms of a failing catalytic converter are, roughly how much it would cost to replace it myself, and maybe link me to a couple of YouTube videos showing how to do it?\""
+    },
+    "ranked_ad_ids": [
+      "4ea7dcef-a063-4fc5-a37a-e1b0322f8b71",
+      "d6d1aea9-5b1f-454f-8076-97c7fcb78d99",
+      "79aba7b2-ff0f-4a7d-b619-376eabb7a2ab",
+      "42d524b8-bc0f-4c1d-a0c7-381a05a58ec6",
+      "6a1fd276-4b2e-4b5d-aa86-cb7d29cd8dcd",
+      "7e02877f-9614-4573-99f0-03694c6a88e4",
+      "4b3e321b-64eb-43d3-8fb0-bc6bb484dc37",
+      "6f97f4f1-f70c-4550-a004-3faf66e7166f",
+      "5d2d4755-281b-4c40-91a1-6f57d9a2ecef",
+      "e5a77675-3196-4f7d-a1aa-c13f407f19c3"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Entertainment",
+      "subdomain": "Movies & TV",
+      "query": "\"I really loved Severance and Black Mirror. Can you recommend some other mind-bending sci-fi shows, preferably ones with a similar unsettling atmosphere but maybe a little less bleak than Black Mirror? Bonus points if they're available on HBO Max or Apple TV+ since I already have those.\""
+    },
+    "ranked_ad_ids": [
+      "656c3479-7905-4dba-811a-81a093867ca9",
+      "78cd9b6b-d39a-4293-862f-4c7460140f1e",
+      "0082fe54-61cf-40bf-9907-2d188dc2448e",
+      "a6aa3263-175e-4327-b99f-08508c1a097d",
+      "64db275b-bbc8-422f-b0a6-fea1e814b3a5",
+      "35f9073c-ccc5-4a74-b876-b5dd2161ca3e",
+      "71a55963-bb0a-40fe-8716-21dad878cc0c",
+      "fcceee98-bed8-429f-bea6-c14333f496d5",
+      "7e3b1f87-7ca9-439c-9687-078090ad3c66",
+      "982583d5-bb90-4881-a902-15b2b7cbbc97"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Entertainment",
+      "subdomain": "Software",
+      "query": "\"I'm trying to decide between Unreal Engine and Unity for a personal indie game project. It's going to be a 3D platformer with a cartoon art style, kind of like a mix of Spyro and Psychonauts. Which engine would you recommend for a beginner, and are there any good online resources you can point me towards for learning either one?  I'm mostly concerned with ease of use and a good community for support.\""
+    },
+    "ranked_ad_ids": [
+      "3b176c22-2d4c-4839-bb2b-e4175661c678",
+      "7e3b1f87-7ca9-439c-9687-078090ad3c66",
+      "76f2e7db-bd63-44c3-b267-1b917bb4631d",
+      "f4d0a254-d80a-46e9-b021-9c870b19c8e8",
+      "3de85a5d-6a98-47b9-83a3-8f1ae1f06681",
+      "32b7ff2f-ebb6-4dda-9ae2-ae6a9b84831a",
+      "8eef6370-599a-4a1b-8d4b-a124707016ab",
+      "79aba7b2-ff0f-4a7d-b619-376eabb7a2ab",
+      "27dbae42-e430-4c91-81db-8803c8478669",
+      "7305dcdb-d2d8-4ca2-9976-1ef7da1c6986"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Entertainment",
+      "subdomain": "Toys & Games",
+      "query": "\"My kid's birthday is coming up and they're really into dinosaurs and building things. Can you recommend some good toys or games that combine those two interests? They're turning 7, so nothing too complicated but not too babyish either.  Ideally something under $50.\""
+    },
+    "ranked_ad_ids": [
+      "9314f21e-2124-4c1c-8873-76d473706b81",
+      "abe60550-b29f-4a0b-aa1a-f3529b3d0d5c",
+      "01bfb5aa-1418-40e5-b8b6-397b771399bd",
+      "30f25eaa-887d-4956-af06-f10450aec32d",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "64db275b-bbc8-422f-b0a6-fea1e814b3a5",
+      "6bd92c10-ecab-478f-ba74-81c6c8d9f72f",
+      "60259d63-44da-44d7-918a-f4bd83d50098",
+      "ab2dafbc-bb54-4714-943b-652ddc765e17",
+      "f9e3f6bd-39c1-4cf7-bc0a-4cebf77754ba"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Entertainment",
+      "subdomain": "Books",
+      "query": "\"I'm looking for a good fantasy book, something like 'Mistborn' but with more political intrigue.  I'd also prefer it to be a completed series so I don't have to wait for the next book. Any recommendations?\""
+    },
+    "ranked_ad_ids": [
+      "656c3479-7905-4dba-811a-81a093867ca9",
+      "e9c92898-a229-45f5-af54-470029185af4",
+      "7e02877f-9614-4573-99f0-03694c6a88e4",
+      "71a55963-bb0a-40fe-8716-21dad878cc0c",
+      "638e9327-c03a-4f5f-848f-ac18b854d9db",
+      "5ec63106-d517-4ded-932a-25a2d9fbe879",
+      "11721280-32e2-47db-be01-25affcbba3a5",
+      "d5e35905-3fb8-4ee3-a6cd-59ec1942544e",
+      "fcceee98-bed8-429f-bea6-c14333f496d5",
+      "29d8dda0-c6d9-4208-b7f0-a14a9b120747"
+    ]
+  },
+  {
+    "query": {
+      "domain": "Entertainment",
+      "subdomain": "Musical Instruments",
+      "query": "\"I'm starting a bluegrass band and I play guitar.  We need a banjo player, a mandolin player, and a fiddle player. Can you give me a rundown of each of those instruments \u2013 like what their range is, what they typically sound like, and maybe even some famous bluegrass musicians who play them so I can get a better idea of what to look for in bandmates?\""
+    },
+    "ranked_ad_ids": [
+      "a767622a-e5f8-48f9-b026-e960bb488e96",
+      "29c2202b-3373-49c1-aeac-28acb0e6f562",
+      "44b7967f-ae04-4812-9b29-0591a11a5465",
+      "e2ba2905-e627-4c3a-a235-a3b3d84c4dbc",
+      "128e3cbf-8861-4cc5-b0b5-c520f8bc0b17",
+      "9635ac09-7435-4989-bf28-7d0267d7e38c",
+      "bfc96a5c-b11e-481c-80f8-c43f5d0fb209",
+      "26526b1b-b9ba-4e36-b80f-835d90ff3eb5",
+      "be05322e-4507-45c4-bca3-c064899a7305",
+      "6bd92c10-ecab-478f-ba74-81c6c8d9f72f"
+    ]
+  }
+]
