@@ -32,8 +32,8 @@ src/llamafactory/train/rm/
 
 ### 2. Data Folder
 Place your training datasets in `data/` folder:
-- `train_ppo.json` - PPO training data (generated using create functions from [ad-doc-reranker](https://anonymous.4open.science/r/ad-doc-reranker-2CC3/))
-- `train_reward.json` - Reward model training data (generated using create functions from [ad-doc-reranker](https://anonymous.4open.science/r/ad-doc-reranker-2CC3/))
+- `train_ppo.json` - PPO training data (generated using create functions from [ad-doc-reranker](https://anonymous.4open.science/r/ad-doc-reranker-57C6))
+- `train_reward.json` - Reward model training data (generated using create functions from [ad-doc-reranker](https://anonymous.4open.science/r/ad-doc-reranker-57C6))
 - Any other custom datasets referenced in your YAML configs
 
 **Note**: The `train_reward` and `train_ppo` datasets are generated using the create functions from the ad-doc-reranker repository. Refer to that repository's documentation for dataset generation instructions.
