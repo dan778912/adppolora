@@ -175,7 +175,7 @@ deepspeed:
 llamafactory-cli train examples/train_lora/llama3_lora_reward.yaml
 
 # 2. Train PPO with custom reward model  
-llamafactory-cli train examples/train_lora/llama3_lora_ppo.yaml
+FORCE_TORCHRUN=1 llamafactory-cli train examples/train_lora/llama3_lora_ppo.yaml
 ```
 
 ## Custom Loss Parameters
