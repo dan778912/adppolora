@@ -13,6 +13,7 @@ This project implements PPO LoRA training with a custom similarity-based reward 
 ```bash
 git clone <your-repo-url>
 cd ad_ppo_lora
+pip install -r requirements.txt
 pip install -e ".[torch,metrics]"
 pip install sentence_transformers
 ```
@@ -174,7 +175,8 @@ deepspeed:
 # 1. Train reward model with custom loss
 llamafactory-cli train examples/train_lora/llama3_lora_reward.yaml
 
-# 2. Train PPO with custom reward model  
+# 2. Train PPO with custom reward model
+pip install deepspeed
 FORCE_TORCHRUN=1 llamafactory-cli train examples/train_lora/llama3_lora_ppo.yaml
 ```
 
